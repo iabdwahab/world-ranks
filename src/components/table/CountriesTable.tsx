@@ -1,6 +1,6 @@
 const CountriesTable = () => {
   return (
-    <table className="border h-fit">
+    <table className="border h-fit w-full">
       <thead>
         <tr className="bg-black">
           <th>Flag</th>

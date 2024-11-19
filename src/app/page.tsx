@@ -14,7 +14,9 @@ export default function Home() {
             <aside>
               <Sidebar />
             </aside>
-            <CountriesTable />
+            <div className="overflow-x-scroll">
+              <CountriesTable />
+            </div>
           </div>
         </main>
       </div>
