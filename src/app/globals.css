@@ -7,10 +7,9 @@
 }
 
 th {
-  @apply text-white;
+  @apply text-white p-3 text-nowrap text-start;
 }
 
-th,
 td {
-  @apply border p-3 text-start;
+  @apply px-3 py-2 text-start;
 }

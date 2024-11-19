@@ -1,9 +1,11 @@
-const CountriesTable = () => {
+import { countryInterface } from '@/types_interfaces/types_interfaces';
+
+const CountriesTable = ({ data }: { data: countryInterface[] }) => {
   return (
     <table className="border h-fit w-full">
       <thead>
         <tr className="bg-black">
-          <th>Flag</th>
+          <th className="w-[70px]">Flag</th>
           <th>Name</th>
           <th>Population</th>
           <th>
@@ -13,28 +15,19 @@ const CountriesTable = () => {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Flag</td>
-          <td>Name</td>
-          <td>Population</td>
-          <td>Area</td>
-          <td>Region</td>
-        </tr>
-        <tr>
-          <td>Flag</td>
-          <td>Name</td>
-          <td>Population</td>
-          <td>Area</td>
-          <td>Region</td>
-        </tr>
-
-        <tr>
-          <td>Flag</td>
-          <td>Name</td>
-          <td>Population</td>
-          <td>Area</td>
-          <td>Region</td>
-        </tr>
+        {data.map((country) => {
+          return (
+            <tr className="font-medium border-b">
+              <td>
+                <img src={country.flags.svg} alt={country.flags.alt} className="w-full min-w-[70px] h-[40px] object-cover rounded" />
+              </td>
+              <td>{country.name.common}</td>
+              <td>{country.population}</td>
+              <td>{country.area}</td>
+              <td>{country.region}</td>
+            </tr>
+          );
+        })}
       </tbody>
     </table>
   );

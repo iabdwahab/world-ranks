@@ -1,10 +1,10 @@
 import FoundedCount from './FoundedCount';
 import SearchInput from './SearchInput';
 
-const SearchContainer = () => {
+const SearchContainer = ({ countriesCount }: { countriesCount: number }) => {
   return (
     <div className="flex flex-col gap-2 md:items-center md:flex-row justify-between">
-      <FoundedCount countriesCount={20} />
+      <FoundedCount countriesCount={countriesCount} />
       <SearchInput />
     </div>
   );
