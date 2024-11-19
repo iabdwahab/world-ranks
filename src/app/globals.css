@@ -5,3 +5,12 @@
 .container {
   @apply max-w-7xl mx-auto px-2;
 }
+
+th {
+  @apply text-white;
+}
+
+th,
+td {
+  @apply border p-3 text-start;
+}

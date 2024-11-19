@@ -1,6 +1,7 @@
 import Header from '@/components/header/Header';
 import SearchContainer from '@/components/search/SearchContainer';
 import Sidebar from '@/components/sidebar/Sidebar';
+import CountriesTable from '@/components/table/CountriesTable';
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
             <aside>
               <Sidebar />
             </aside>
-            <div className="bg-stone-600">Table Content</div>
+            <CountriesTable />
           </div>
         </main>
       </div>
