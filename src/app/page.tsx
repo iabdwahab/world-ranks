@@ -10,7 +10,7 @@ export default function Home() {
         <main className="border rounded-md my-4 p-3">
           <SearchContainer />
           <div className="grid lg:grid-cols-main-grid gap-6 my-4">
-            <aside className="bg-blue-800">
+            <aside>
               <Sidebar />
             </aside>
             <div className="bg-stone-600">Table Content</div>
