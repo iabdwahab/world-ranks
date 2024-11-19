@@ -17,7 +17,7 @@ const CountriesTable = ({ data }: { data: countryInterface[] }) => {
       <tbody>
         {data.map((country) => {
           return (
-            <tr className="font-medium border-b">
+            <tr key={country.name.common} className="font-medium border-b">
               <td>
                 <img src={country.flags.svg} alt={country.flags.alt} className="w-full min-w-[70px] h-[40px] object-cover rounded" />
               </td>
