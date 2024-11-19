@@ -10,6 +10,9 @@ export default {
       borderColor: {
         DEFAULT: '#e5e7eb',
       },
+      gridTemplateColumns: {
+        'main-grid': '300px 1fr',
+      },
     },
   },
   plugins: [],
