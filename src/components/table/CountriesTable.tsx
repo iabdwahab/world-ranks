@@ -5,8 +5,14 @@ import { sortCountries } from '@/utils/apiDataUtils';
 import { useContext } from 'react';
 
 const CountriesTable = ({ data }: { data: countryInterface[] }) => {
-  const { sortType } = useContext(FilterContext);
+  const { sortType, selectedRegions } = useContext(FilterContext);
   sortCountries(data, sortType);
+
+  if (selectedRegions.length) {
+    data = data.filter((country) => {
+      return selectedRegions.includes(country.region.toLowerCase());
+    });
+  }
 
   return (
     <table className="border h-fit w-full">
