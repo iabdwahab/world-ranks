@@ -1,18 +1,13 @@
 'use client';
 import { FilterContext } from '@/context/FilterContext';
 import { countryInterface } from '@/types_interfaces/types_interfaces';
-import { sortCountries } from '@/utils/apiDataUtils';
 import { useContext } from 'react';
+import useTableData from './useTableData';
 
 const CountriesTable = ({ data }: { data: countryInterface[] }) => {
-  const { sortType, selectedRegions } = useContext(FilterContext);
-  sortCountries(data, sortType);
+  const { sortType, selectedRegions, unMembersOnly, independentOnly } = useContext(FilterContext);
 
-  if (selectedRegions.length) {
-    data = data.filter((country) => {
-      return selectedRegions.includes(country.region.toLowerCase());
-    });
-  }
+  const showedCountries = useTableData(data, sortType, selectedRegions, unMembersOnly, independentOnly);
 
   return (
     <table className="border h-fit w-full">
@@ -29,7 +24,7 @@ const CountriesTable = ({ data }: { data: countryInterface[] }) => {
         </tr>
       </thead>
       <tbody>
-        {data.map((country, index) => {
+        {showedCountries.map((country, index) => {
           return (
             <tr key={country.name.common} className="font-medium border-b">
               <td className="text-center">{index + 1}</td>
