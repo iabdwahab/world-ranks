@@ -3,7 +3,7 @@ import React, { createContext, useState } from 'react';
 
 export const FilterContext = createContext<{
   sortType: string;
-  setSortType: Function;
+  setSortType: (value: string) => void;
 }>({
   sortType: '',
   setSortType: () => {},
