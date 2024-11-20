@@ -5,7 +5,7 @@ import StatusContainer from './status/StatusContainer';
 
 const Sidebar = () => {
   return (
-    <div className="grid gap-3">
+    <div className="grid gap-3 sticky top-5">
       <SortContainer />
       <RegionContainer />
       <StatusContainer />
