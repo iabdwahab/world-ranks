@@ -15,10 +15,11 @@ export default async function Home() {
         <main className="border rounded-md my-4 p-3">
           <SearchContainer countriesCount={countries.length} />
           <FilterProvider>
-            <div className="grid lg:grid-cols-main-grid gap-6 my-4">
-              <aside>
+            <div className="grid lg:grid-cols-main-grid gap-4 my-4">
+              <aside className="pr-3 md:border-r">
                 <Sidebar />
               </aside>
+
               <div className="overflow-x-scroll">
                 <CountriesTable data={countries} />
               </div>

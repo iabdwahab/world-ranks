@@ -6,6 +6,7 @@ export default {
     extend: {
       colors: {
         'accent-color': '#b0b6c0',
+        'accent-color-lighter': '#eee',
       },
       borderColor: {
         DEFAULT: '#e5e7eb',
