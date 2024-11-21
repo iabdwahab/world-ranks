@@ -24,7 +24,7 @@ const CountriesTable = ({ data }: { data: countryInterface[] }) => {
               {tdsContent.map((tdContent, index) => {
                 return (
                   <td key={index}>
-                    <CountriesTableTdLink href={country.name.common.toLowerCase()}>{tdContent}</CountriesTableTdLink>
+                    <CountriesTableTdLink href={country.cca2}>{tdContent}</CountriesTableTdLink>
                   </td>
                 );
               })}

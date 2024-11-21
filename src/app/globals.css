@@ -6,6 +6,10 @@
   @apply max-w-7xl mx-auto px-2;
 }
 
+.main-layout {
+  @apply grid lg:grid-cols-main-grid gap-4 my-4;
+}
+
 th {
   @apply text-white p-3 text-nowrap text-start;
 }

@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header className="py-4 border-b">
       <div className="container">
-        <h1 className="font-bold md:text-2xl flex justify-center">
+        <h1 className="font-bold text-2xl flex justify-center">
           <Link href="/">
             <Logo />
           </Link>

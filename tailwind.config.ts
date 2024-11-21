@@ -12,7 +12,7 @@ export default {
         DEFAULT: '#e5e7eb',
       },
       gridTemplateColumns: {
-        'main-grid': '300px 1fr',
+        'main-grid': '350px 1fr',
       },
     },
   },
